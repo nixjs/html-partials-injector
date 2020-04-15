@@ -1,0 +1,54 @@
+{
+    "name": "html-partials-injector",
+    "version": "1.0.0",
+    "main": "gulpfile.js",
+    "license": "MIT",
+    "author": {
+        "name": "Nghi Nguyen",
+        "url": "https://github.com/nguyenvannghi"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/nguyenvannghi/html-partials-injector.git"
+    },
+    "homepage": "https://github.com/nguyenvannghi/html-partials-injector",
+    "description": "Inject html/css partials with Gulp and Browsersync",
+    "keywords": [
+        "gulp",
+        "gulpplugin",
+        "gulp-inject",
+        "gulp-injector",
+        "html-partial"
+    ],
+    "bugs": {
+        "url": "https://github.com/nguyenvannghi/html-partials-injector/issues"
+    },
+    "scripts": {
+        "prettier": "prettier --config ./.prettierrc --write \".dist/**/*.{js,scss,html}\"",
+        "init:helloworld": "PROJECT=helloworld gulp create-subproject",
+        "run:helloworld": "PROJECT=helloworld gulp",
+        "init:par": "PROJECT=par gulp create-subproject",
+        "run:par": "PROJECT=par gulp"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "del": "^5.1.0",
+        "fs": "^0.0.1-security",
+        "gulp": "^4.0.2",
+        "gulp-inject": "^5.0.5",
+        "gulp-inline-source": "^4.0.0",
+        "gulp-newer": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp4-run-sequence": "^1.0.1",
+        "husky": "^4.2.5",
+        "prettier": "^2.0.4",
+        "prompts": "^2.3.2",
+        "run-sequence": "^2.2.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run prettier"
+        }
+    }
+}
